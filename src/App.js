@@ -41,7 +41,7 @@ function App() {
   return (
     <div className="bg-slate-950 min-h-screen flex flex-col items-center justify-center text-white overflow-y-auto">
       <div className="flex flex-col border border-slate-900 bg-slate-900/50 rounded-xl w-3/4 md:w-2/4 xl:w-1/4 relative">
-        <Header />
+        <Header date={date}/>
         <ChartContainer cryptoData={cryptoData} />
         <CardInfoContainer cardData={cardData} />
       </div>
