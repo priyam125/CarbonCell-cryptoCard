@@ -1,13 +1,5 @@
-import React, { PureComponent } from "react";
-import {
-  AreaChart,
-  Area,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  ResponsiveContainer,
-} from "recharts";
+import React from "react";
+import { AreaChart, Area, XAxis, Tooltip, ResponsiveContainer } from "recharts";
 
 const CustomTooltip = ({ active, payload }) => {
   if (active && payload && payload.length) {
@@ -35,9 +27,7 @@ export default function AreaChartComponent({ chartData }) {
           bottom: 0,
         }}
       >
-        {/* <CartesianGrid strokeDasharray="3 3" /> */}
         <XAxis dataKey="currency" />
-        {/* <YAxis /> */}
         <Tooltip content={<CustomTooltip />} cursor={{ fill: "transparent" }} />
         <Area type="monotone" dataKey="rate" stroke="#8884d8" fill="#8884d8" />
       </AreaChart>
