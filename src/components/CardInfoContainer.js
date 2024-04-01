@@ -9,7 +9,7 @@ const CardInfoContainer = ({ cardData }) => {
       </div>
       <div className="flex flex-wrap w-full [&>*:nth-child(1)]:w-full gap-[2%] text-yellow-200 font-semibold">
         {cardData?.map((card, index) => (
-          <Card card={card} index={index} />
+          <Card key={index} card={card} index={index} />
         ))}
       </div>
     </div>
